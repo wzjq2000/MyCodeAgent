@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-import typer
-from rich.console import Console
-
-from my_code_agent.utils.config import load_config
-from my_code_agent.utils.logging import setup_logging
-
+from langgraph.graph import StateGraph
+from my_code_agent.agent.agent_state import CodeAgentState
 
 if __name__ == "__main__":
-    pass
+    workflow = StateGraph(CodeAgentState)
+    workflow.add_node()
+
+
